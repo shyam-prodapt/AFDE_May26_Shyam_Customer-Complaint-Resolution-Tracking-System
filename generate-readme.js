@@ -280,6 +280,8 @@ ${swImg('swagger-01-overview.png', 'Swagger UI Overview')}
 
 Login, registration, and password reset.
 
+${swImg('swagger-02-auth.png', 'Auth API')}
+
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
 | POST | \`/api/auth/register\` | Register a new user account | No |
@@ -302,6 +304,8 @@ username=user@example.com&password=YourPassword
 
 User profile and administration.
 
+${swImg('swagger-03-users.png', 'Users API')}
+
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
 | GET | \`/api/users/me\` | Get current user profile | Any |
@@ -314,6 +318,8 @@ User profile and administration.
 ### Complaints API
 
 Core complaint lifecycle management.
+
+${swImg('swagger-04-complaints.png', 'Complaints API')}
 
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
@@ -341,6 +347,8 @@ Core complaint lifecycle management.
 
 Complaint category management.
 
+${swImg('swagger-05-categories.png', 'Categories API')}
+
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
 | GET | \`/api/categories/\` | List all categories | Any |
@@ -353,6 +361,8 @@ Complaint category management.
 ### Feedback API
 
 Customer satisfaction ratings after resolution.
+
+${swImg('swagger-06-feedback.png', 'Feedback API')}
 
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
@@ -370,6 +380,8 @@ Customer satisfaction ratings after resolution.
 
 In-app notification management.
 
+${swImg('swagger-07-notifications.png', 'Notifications API')}
+
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
 | GET | \`/api/notifications/\` | List current user's notifications | Any |
@@ -382,6 +394,8 @@ In-app notification management.
 
 Aggregate statistics for operational reporting.
 
+${swImg('swagger-08-dashboard.png', 'Dashboard API')}
+
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
 | GET | \`/api/dashboard/stats\` | Overall KPIs (total, open, escalated, SLA breaches, avg rating) | Admin, Supervisor, Quality Team |
@@ -393,6 +407,8 @@ Aggregate statistics for operational reporting.
 ### Analytics API *(Phase 2)*
 
 ETL pipeline control and analytics data endpoints.
+
+${swImg('swagger-09-analytics.png', 'Analytics API')}
 
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|

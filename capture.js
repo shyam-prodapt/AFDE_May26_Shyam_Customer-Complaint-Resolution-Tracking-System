@@ -145,98 +145,83 @@ async function capturePages(browser, token) {
 // ── Swagger Screenshots ───────────────────────────────────────────────────────
 
 async function captureSwagger(browser, token) {
-  const page = await browser.newPage();
-  await page.setViewport({ width: 1440, height: 900, deviceScaleFactor: 2 });
-
+  // ── Overview (all groups collapsed) ──
   console.log('\n── Swagger UI ──');
-  await page.goto(SWAGGER, { waitUntil: 'networkidle2', timeout: 30000 });
-  await waitMs(3500); // Swagger JS must finish rendering — 3500ms minimum per CLAUDE.md
-
-  // Overview — all groups collapsed
-  await screenshot(page, path.join(SWAGGER_SS_DIR, 'swagger-01-overview.png'), 'Swagger Overview');
-
-  // Authorize dialog
-  console.log('\n── Swagger Authorization ──');
-  const authClicked = await page.evaluate(() => {
-    const btn = document.querySelector('.btn.authorize');
-    if (btn) { btn.click(); return true; }
-    return false;
-  });
-
-  if (authClicked) {
-    await waitMs(800);
-    // Clear any existing value and type the token
-    await page.evaluate(() => {
-      const input = document.querySelector('.auth-container input[type="text"]');
-      if (input) { input.value = ''; input.dispatchEvent(new Event('input', { bubbles: true })); }
-    });
-    await page.type('.auth-container input[type="text"]', token, { delay: 20 });
-    await waitMs(400);
-    await screenshot(page, path.join(SWAGGER_SS_DIR, 'swagger-auth-dialog.png'), 'Swagger Auth Dialog');
-
-    // Click the Authorize button inside the modal
-    await page.evaluate(() => {
-      const btns = Array.from(document.querySelectorAll('.auth-btn-wrapper button'));
-      const authBtn = btns.find(b => b.textContent.trim() === 'Authorize');
-      if (authBtn) authBtn.click();
-    });
-    await waitMs(800);
-    await screenshot(page, path.join(SWAGGER_SS_DIR, 'swagger-authorized.png'), 'Swagger Authorized');
-
-    // Close the modal
-    await page.evaluate(() => {
-      const closeBtn = document.querySelector('.btn-done');
-      if (closeBtn) closeBtn.click();
-    });
-    await waitMs(500);
-  } else {
-    console.warn('  ⚠ Could not find Authorize button in Swagger UI');
+  {
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1440, height: 900, deviceScaleFactor: 2 });
+    await page.goto(SWAGGER, { waitUntil: 'networkidle2', timeout: 30000 });
+    await waitMs(3500);
+    await screenshot(page, path.join(SWAGGER_SS_DIR, 'swagger-01-overview.png'), 'Swagger Overview');
+    await page.close();
   }
 
-  // Per-tag group screenshots — text-content matching (never DOM IDs per CLAUDE.md)
+  // ── Auth dialog (fresh page) ──
+  console.log('\n── Swagger Authorization ──');
+  {
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1440, height: 900, deviceScaleFactor: 2 });
+    await page.goto(SWAGGER, { waitUntil: 'networkidle2', timeout: 30000 });
+    await waitMs(3500);
+
+    const authClicked = await page.evaluate(() => {
+      const btn = document.querySelector('.btn.authorize');
+      if (btn) { btn.click(); return true; }
+      return false;
+    });
+
+    if (authClicked) {
+      await waitMs(800);
+      await page.evaluate(() => {
+        const input = document.querySelector('.auth-container input[type="text"]');
+        if (input) { input.value = ''; input.dispatchEvent(new Event('input', { bubbles: true })); }
+      });
+      await page.type('.auth-container input[type="text"]', token, { delay: 20 });
+      await waitMs(400);
+      await screenshot(page, path.join(SWAGGER_SS_DIR, 'swagger-auth-dialog.png'), 'Swagger Auth Dialog');
+
+      await page.evaluate(() => {
+        const btns = Array.from(document.querySelectorAll('.auth-btn-wrapper button'));
+        const authBtn = btns.find(b => b.textContent.trim() === 'Authorize');
+        if (authBtn) authBtn.click();
+      });
+      await waitMs(800);
+      await screenshot(page, path.join(SWAGGER_SS_DIR, 'swagger-authorized.png'), 'Swagger Authorized');
+    } else {
+      console.warn('  ⚠ Could not find Authorize button in Swagger UI');
+    }
+    await page.close();
+  }
+
+  // ── Per-group screenshots — one fresh page per group ──
+  // Fresh page per group guarantees a clean state: no previously expanded
+  // endpoints, no cached execution results, no 422 response panels visible.
   console.log('\n── Swagger Tag Groups ──');
   for (let i = 0; i < SWAGGER_TAGS.length; i++) {
     const tag      = SWAGGER_TAGS[i];
-    const num      = String(i + 2).padStart(2, '0'); // 02, 03, ...
+    const num      = String(i + 2).padStart(2, '0');
     const filename = `swagger-${num}-${tag.toLowerCase()}.png`;
 
-    // Scroll to top before expanding each section
-    await page.evaluate(() => window.scrollTo(0, 0));
-    await waitMs(200);
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1440, height: 900, deviceScaleFactor: 2 });
 
-    // Collapse all sections first (click any that are already open)
-    await page.evaluate((tagName) => {
-      const sections = document.querySelectorAll('.opblock-tag-section');
-      sections.forEach(section => {
-        const h3 = section.querySelector('h3');
-        if (!h3) return;
-        const txt = h3.textContent.trim().replace(/\s+/g, ' ');
-        if (!txt.startsWith(tagName)) {
-          // If expanded, collapse it
-          const isOpen = section.classList.contains('is-open');
-          if (isOpen) {
-            const btn = h3.querySelector('button') || h3;
-            btn.click();
-          }
-        }
-      });
-    }, tag);
+    await page.goto(SWAGGER, { waitUntil: 'networkidle2', timeout: 30000 });
+    await waitMs(3500); // Swagger JS must fully render before any interaction
 
-    await waitMs(200);
-
-    // Expand target section using text-content matching
+    // Expand only the target group — text-content matching, never DOM IDs
     const expanded = await page.evaluate((tagName) => {
-      const sections = document.querySelectorAll('.opblock-tag-section');
-      for (const section of sections) {
-        const h3 = section.querySelector('h3');
-        if (!h3) continue;
+      // Try .opblock-tag first (the clickable tag header element)
+      const tagEls = document.querySelectorAll('.opblock-tag');
+      for (const el of tagEls) {
+        const txt = el.textContent.trim().replace(/\s+/g, ' ');
+        if (txt.startsWith(tagName)) { el.click(); return true; }
+      }
+      // Fallback: h3 button inside .opblock-tag-section
+      const h3s = document.querySelectorAll('.opblock-tag-section h3');
+      for (const h3 of h3s) {
         const txt = h3.textContent.trim().replace(/\s+/g, ' ');
         if (txt.startsWith(tagName)) {
-          const isOpen = section.classList.contains('is-open');
-          if (!isOpen) {
-            const btn = h3.querySelector('button') || h3;
-            btn.click();
-          }
+          (h3.querySelector('button') || h3).click();
           return true;
         }
       }
@@ -244,17 +229,17 @@ async function captureSwagger(browser, token) {
     }, tag);
 
     if (!expanded) {
-      console.warn(`  ⚠ Tag section not found: "${tag}" — skipping`);
+      console.warn(`  ⚠ Tag not found: "${tag}" — skipping`);
+      await page.close();
       continue;
     }
 
-    await waitMs(1000); // Per CLAUDE.md: 1000ms after expanding
+    await waitMs(1200); // wait for expand animation + endpoint list render
     await page.evaluate(() => window.scrollTo(0, 0));
-    await waitMs(200);
+    await waitMs(300);
     await screenshot(page, path.join(SWAGGER_SS_DIR, filename), `Swagger ${tag}`);
+    await page.close();
   }
-
-  await page.close();
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────

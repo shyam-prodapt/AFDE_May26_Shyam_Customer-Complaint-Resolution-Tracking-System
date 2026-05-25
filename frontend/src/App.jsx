@@ -11,6 +11,7 @@ import ComplaintDetail from './pages/complaints/ComplaintDetail'
 import NewComplaint from './pages/complaints/NewComplaint'
 import UserManagement from './pages/users/UserManagement'
 import Categories from './pages/Categories'
+import Analytics from './pages/Analytics'
 
 const ADMIN_ROLES = ['Admin']
 const MANAGEMENT_ROLES = ['Admin', 'Supervisor', 'Quality Team']
@@ -43,6 +44,9 @@ export default function App() {
           } />
           <Route path="/categories" element={
             <ProtectedRoute roles={ADMIN_ROLES}><Categories /></ProtectedRoute>
+          } />
+          <Route path="/analytics" element={
+            <ProtectedRoute roles={MANAGEMENT_ROLES}><Analytics /></ProtectedRoute>
           } />
 
           <Route path="/" element={<Navigate to="/complaints" replace />} />

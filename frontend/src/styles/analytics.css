@@ -1,0 +1,273 @@
+/* ── Analytics Page ── */
+.analytics-page {
+  animation: page-in 0.3s ease-out;
+}
+
+@keyframes page-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.analytics-page h2 {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+
+.analytics-page .sub {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+  letter-spacing: 0.04em;
+}
+
+/* ── ETL Command Bar ── */
+.etl-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin-bottom: 26px;
+  position: relative;
+  overflow: hidden;
+}
+
+.etl-bar::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--gold), rgba(255,200,74,0.3));
+  border-radius: 3px 0 0 3px;
+}
+
+.etl-bar p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  flex: 1;
+  letter-spacing: 0.03em;
+}
+
+.btn-etl {
+  padding: 10px 22px;
+  background: var(--gold);
+  color: #07080e;
+  border: none;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: inherit;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.15s, box-shadow 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.btn-etl:hover {
+  opacity: 0.88;
+  box-shadow: 0 0 24px rgba(255,200,74,0.35);
+}
+
+.btn-etl:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+@keyframes etl-pulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(255,200,74,0.25); }
+  50%       { box-shadow: 0 0 24px rgba(255,200,74,0.55); }
+}
+
+.btn-etl:not(:disabled) { animation: etl-pulse 3s ease-in-out infinite; }
+.btn-etl:not(:disabled):hover { animation: none; }
+
+.etl-result {
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--emerald);
+  background: var(--emerald-soft);
+  border: 1px solid rgba(52,211,153,0.18);
+  border-radius: 6px;
+  padding: 6px 12px;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+/* ── Summary Cards ── */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.summary-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  border: 1px solid var(--border-dim);
+  text-align: center;
+  transition: border-color 0.2s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.summary-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.025), transparent 60%);
+  pointer-events: none;
+}
+
+.summary-card:hover {
+  border-color: var(--border-subtle);
+  transform: translateY(-1px);
+}
+
+.summary-card .s-value {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.summary-card .s-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ── Charts Grid ── */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.a-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 20px;
+  border: 1px solid var(--border-dim);
+  transition: border-color 0.2s;
+}
+
+.a-card:hover { border-color: var(--border-subtle); }
+
+.a-card h3 {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+}
+
+.no-data {
+  text-align: center;
+  padding: 36px 0;
+  color: var(--text-muted);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+/* ── Agent Performance Table ── */
+.agent-table { width: 100%; border-collapse: collapse; }
+
+.agent-table th {
+  text-align: left;
+  padding: 7px 10px;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--border-line);
+  background: transparent;
+}
+
+.agent-table td {
+  padding: 8px 10px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-line);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.agent-table td:first-child {
+  font-family: 'Syne', sans-serif;
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.agent-table tr:last-child td { border-bottom: none; }
+.agent-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+/* ── Resolution Rate Bar ── */
+.rate-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.rate-bar {
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.06);
+  flex: 1;
+  overflow: hidden;
+}
+
+.rate-bar-fill {
+  height: 5px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--teal), var(--emerald));
+  transition: width 0.8s ease-out;
+}
+
+/* ── Loading ── */
+.loading-state {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-muted);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  padding: 24px 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-dot {
+  width: 16px; height: 16px;
+  border: 2px solid var(--border-subtle);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .analytics-grid { grid-template-columns: 1fr; }
+}

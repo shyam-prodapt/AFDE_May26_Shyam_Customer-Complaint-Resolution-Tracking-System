@@ -10,10 +10,12 @@ const NAV = {
     { to: '/complaints',  label: 'All Complaints' },
     { to: '/users',       label: 'User Management' },
     { to: '/categories',  label: 'Categories' },
+    { to: '/analytics',   label: 'Analytics' },
   ],
   Supervisor: [
     { to: '/dashboard',   label: 'Dashboard' },
     { to: '/complaints',  label: 'All Complaints' },
+    { to: '/analytics',   label: 'Analytics' },
   ],
   'Support Agent': [
     { to: '/complaints',  label: 'My Queue' },
@@ -25,6 +27,7 @@ const NAV = {
   'Quality Team': [
     { to: '/dashboard',   label: 'Dashboard' },
     { to: '/complaints',  label: 'Complaints' },
+    { to: '/analytics',   label: 'Analytics' },
   ],
 }
 
@@ -88,7 +91,7 @@ export default function Layout({ children, title }) {
               🔔
               {unread > 0 && <span className="notif-badge">{unread}</span>}
             </button>
-            <span style={{ fontSize: 13, color: '#6b7280' }}>{user?.email}</span>
+            <span className="topbar-email">{user?.email}</span>
           </div>
         </header>
         <main className="page-content">{children}</main>

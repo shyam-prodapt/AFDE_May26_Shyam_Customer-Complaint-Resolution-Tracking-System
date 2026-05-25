@@ -7,8 +7,10 @@ from app.database import Base, engine
 
 # Import models so SQLAlchemy registers them before create_all
 import app.models  # noqa: F401
+import app.models.analytics  # noqa: F401
 
 from app.routers import auth, users, complaints, categories, feedback, notifications, dashboard
+from app.routers import analytics
 
 Base.metadata.create_all(bind=engine)
 
@@ -35,6 +37,7 @@ app.include_router(categories.router)
 app.include_router(feedback.router)
 app.include_router(notifications.router)
 app.include_router(dashboard.router)
+app.include_router(analytics.router)
 
 
 @app.get("/", tags=["Health"])

@@ -1,0 +1,251 @@
+complaint_id,customer_name,category,priority,status,assigned_agent,created_date,resolved_date,resolution_time_hours,sla_threshold_hours,description
+COMP-20250313-0001,Customer_029,Account Issues,Low,Escalated,Bob Smith,2025-03-13 23:06:00,,,72,Account Issues reported by Customer_029 with Low priority.
+COMP-20250422-0002,Customer_012,Delivery Delays,Low,Closed,Alice Johnson,2025-04-22 07:32:00,2025-04-24 01:02:00,41.5,72,Delivery Delays reported by Customer_012 with Low priority.
+COMP-20251029-0003,Customer_058,Account Issues,Medium,Closed,Bob Smith,2025-10-29 08:51:00,2025-10-30 20:39:00,35.8,48,Account Issues reported by Customer_058 with Medium priority.
+COMP-20260506-0004,Customer_028,Service Disruption,Medium,Resolved,Bob Smith,2026-05-06 10:06:00,2026-05-08 23:42:00,61.6,48,Service Disruption reported by Customer_028 with Medium priority.
+COMP-20251002-0005,Customer_059,Customer Service Complaints,Medium,Resolved,Alice Johnson,2025-10-02 03:59:00,2025-10-03 07:17:00,27.3,48,Customer Service Complaints reported by Customer_059 with Medium priority.
+COMP-20250409-0006,Customer_074,Customer Service Complaints,Medium,Open,Carol White,2025-04-09 22:04:00,,,48,Customer Service Complaints reported by Customer_074 with Medium priority.
+COMP-20260320-0007,Customer_030,Service Disruption,High,In Progress,Grace Wilson,2026-03-20 03:24:00,,,24,Service Disruption reported by Customer_030 with High priority.
+COMP-20251210-0008,Customer_027,Account Issues,High,Resolved,Carol White,2025-12-10 08:44:00,2025-12-11 00:20:00,15.6,24,Account Issues reported by Customer_027 with High priority.
+COMP-20250825-0009,Customer_021,Delivery Delays,Medium,Closed,Bob Smith,2025-08-25 12:17:00,2025-08-26 19:11:00,30.9,48,Delivery Delays reported by Customer_021 with Medium priority.
+COMP-20250428-0010,Customer_008,Delivery Delays,Low,Resolved,Grace Wilson,2025-04-28 01:51:00,2025-05-02 21:39:00,115.8,72,Delivery Delays reported by Customer_008 with Low priority.
+COMP-20250419-0011,Customer_041,Service Disruption,Critical,Closed,Frank Miller,2025-04-19 20:31:00,2025-04-20 00:01:00,3.5,4,Service Disruption reported by Customer_041 with Critical priority.
+COMP-20251003-0012,Customer_072,Technical Problems,Low,Resolved,Frank Miller,2025-10-03 08:47:00,2025-10-05 22:53:00,62.1,72,Technical Problems reported by Customer_072 with Low priority.
+COMP-20250910-0013,Customer_066,Technical Problems,Medium,In Progress,Bob Smith,2025-09-10 02:48:00,,,48,Technical Problems reported by Customer_066 with Medium priority.
+COMP-20251102-0014,Customer_055,Billing Issues,Low,Resolved,Frank Miller,2025-11-02 02:24:00,2025-11-04 22:36:00,68.2,72,Billing Issues reported by Customer_055 with Low priority.
+COMP-20251216-0015,Customer_015,Delivery Delays,Low,Closed,Alice Johnson,2025-12-16 17:48:00,2025-12-23 16:42:00,166.9,72,Delivery Delays reported by Customer_015 with Low priority.
+COMP-20260513-0016,Customer_034,Billing Issues,Low,Resolved,Alice Johnson,2026-05-13 16:48:00,2026-05-22 04:48:00,204.0,72,Billing Issues reported by Customer_034 with Low priority.
+COMP-20250412-0017,Customer_078,Customer Service Complaints,Medium,Open,Emma Davis,2025-04-12 04:23:00,,,48,Customer Service Complaints reported by Customer_078 with Medium priority.
+COMP-20250615-0018,Customer_077,Delivery Delays,Critical,In Progress,Alice Johnson,2025-06-15 15:01:00,,,4,Delivery Delays reported by Customer_077 with Critical priority.
+COMP-20250130-0019,Customer_031,Product Defects,High,Open,Carol White,2025-01-30 07:56:00,,,24,Product Defects reported by Customer_031 with High priority.
+COMP-20260128-0020,Customer_069,Billing Issues,Low,Closed,Alice Johnson,2026-01-28 04:08:00,2026-01-30 21:14:00,65.1,72,Billing Issues reported by Customer_069 with Low priority.
+COMP-20260421-0021,Customer_028,Service Disruption,Low,Open,David Lee,2026-04-21 17:48:00,,,72,Service Disruption reported by Customer_028 with Low priority.
+COMP-20250813-0022,Customer_048,Service Disruption,High,Resolved,Frank Miller,2025-08-13 16:28:00,2025-08-15 05:04:00,36.6,24,Service Disruption reported by Customer_048 with High priority.
+COMP-20250104-0023,Customer_029,Product Defects,Low,Closed,Emma Davis,2025-01-04 02:45:00,2025-01-04 23:57:00,21.2,72,Product Defects reported by Customer_029 with Low priority.
+COMP-20251209-0024,Customer_036,Billing Issues,High,Resolved,Bob Smith,2025-12-09 15:13:00,2025-12-10 08:25:00,17.2,24,Billing Issues reported by Customer_036 with High priority.
+COMP-20250408-0025,Customer_053,Delivery Delays,Medium,Resolved,David Lee,2025-04-08 03:06:00,2025-04-08 22:24:00,19.3,48,Delivery Delays reported by Customer_053 with Medium priority.
+COMP-20250201-0026,Customer_013,Technical Problems,Medium,Escalated,Frank Miller,2025-02-01 12:46:00,,,48,Technical Problems reported by Customer_013 with Medium priority.
+COMP-20250313-0027,Customer_058,Customer Service Complaints,Low,Resolved,Emma Davis,2025-03-13 13:11:00,2025-03-18 06:35:00,113.4,72,Customer Service Complaints reported by Customer_058 with Low priority.
+COMP-20250126-0028,Customer_013,Billing Issues,Medium,Open,Emma Davis,2025-01-26 20:34:00,,,48,Billing Issues reported by Customer_013 with Medium priority.
+COMP-20250906-0029,Customer_053,Billing Issues,Critical,Open,Bob Smith,2025-09-06 15:13:00,,,4,Billing Issues reported by Customer_053 with Critical priority.
+COMP-20260420-0030,Customer_034,Billing Issues,Low,Resolved,David Lee,2026-04-20 14:18:00,2026-04-23 08:06:00,65.8,72,Billing Issues reported by Customer_034 with Low priority.
+COMP-20250601-0031,Customer_025,Customer Service Complaints,Medium,Escalated,Bob Smith,2025-06-01 06:03:00,,,48,Customer Service Complaints reported by Customer_025 with Medium priority.
+COMP-20250902-0032,Customer_075,Delivery Delays,Low,Resolved,Alice Johnson,2025-09-02 16:58:00,2025-09-03 09:46:00,16.8,72,Delivery Delays reported by Customer_075 with Low priority.
+COMP-20251212-0033,Customer_009,Delivery Delays,Low,Resolved,Emma Davis,2025-12-12 07:25:00,2025-12-20 16:25:00,201.0,72,Delivery Delays reported by Customer_009 with Low priority.
+COMP-20251203-0034,Customer_054,Service Disruption,Medium,Resolved,Alice Johnson,2025-12-03 18:36:00,2025-12-05 13:30:00,42.9,48,Service Disruption reported by Customer_054 with Medium priority.
+COMP-20250309-0035,Customer_051,Service Disruption,Medium,Resolved,Carol White,2025-03-09 21:41:00,2025-03-13 07:17:00,81.6,48,Service Disruption reported by Customer_051 with Medium priority.
+COMP-20250221-0036,Customer_073,Customer Service Complaints,Critical,Resolved,Emma Davis,2025-02-21 02:34:00,2025-02-21 08:58:00,6.4,4,Customer Service Complaints reported by Customer_073 with Critical priority.
+COMP-20250322-0037,Customer_037,Product Defects,High,Open,Carol White,2025-03-22 14:53:00,,,24,Product Defects reported by Customer_037 with High priority.
+COMP-20250105-0038,Customer_068,Product Defects,Medium,In Progress,Frank Miller,2025-01-05 21:52:00,,,48,Product Defects reported by Customer_068 with Medium priority.
+COMP-20260401-0039,Customer_015,Account Issues,Low,Open,Carol White,2026-04-01 03:47:00,,,72,Account Issues reported by Customer_015 with Low priority.
+COMP-20251218-0040,Customer_027,Product Defects,Low,Resolved,Carol White,2025-12-18 20:54:00,2025-12-24 22:54:00,146.0,72,Product Defects reported by Customer_027 with Low priority.
+COMP-20250123-0041,Customer_036,Customer Service Complaints,Low,Closed,Grace Wilson,2025-01-23 00:21:00,2025-01-24 22:33:00,46.2,72,Customer Service Complaints reported by Customer_036 with Low priority.
+COMP-20251015-0042,Customer_055,Product Defects,Low,Closed,Frank Miller,2025-10-15 00:07:00,2025-10-23 08:07:00,200.0,72,Product Defects reported by Customer_055 with Low priority.
+COMP-20250317-0043,Customer_071,Service Disruption,Medium,Open,Emma Davis,2025-03-17 13:08:00,,,48,Service Disruption reported by Customer_071 with Medium priority.
+COMP-20260406-0044,Customer_006,Product Defects,High,Escalated,Grace Wilson,2026-04-06 11:13:00,,,24,Product Defects reported by Customer_006 with High priority.
+COMP-20260514-0045,Customer_053,Account Issues,Low,Escalated,Grace Wilson,2026-05-14 19:47:00,,,72,Account Issues reported by Customer_053 with Low priority.
+COMP-20260328-0046,Customer_023,Service Disruption,High,In Progress,Grace Wilson,2026-03-28 13:01:00,,,24,Service Disruption reported by Customer_023 with High priority.
+COMP-20250517-0047,Customer_032,Product Defects,High,Closed,Frank Miller,2025-05-17 05:50:00,2025-05-17 16:02:00,10.2,24,Product Defects reported by Customer_032 with High priority.
+COMP-20250629-0048,Customer_059,Billing Issues,High,Resolved,Grace Wilson,2025-06-29 09:52:00,2025-06-29 16:52:00,7.0,24,Billing Issues reported by Customer_059 with High priority.
+COMP-20260511-0049,Customer_009,Billing Issues,Medium,Resolved,Carol White,2026-05-11 08:22:00,2026-05-12 05:28:00,21.1,48,Billing Issues reported by Customer_009 with Medium priority.
+COMP-20250402-0050,Customer_034,Customer Service Complaints,Medium,In Progress,Alice Johnson,2025-04-02 18:16:00,,,48,Customer Service Complaints reported by Customer_034 with Medium priority.
+COMP-20251107-0051,Customer_056,Delivery Delays,Medium,Escalated,Carol White,2025-11-07 16:07:00,,,48,Delivery Delays reported by Customer_056 with Medium priority.
+COMP-20250924-0052,Customer_001,Delivery Delays,Low,Resolved,David Lee,2025-09-24 17:43:00,2025-09-26 22:19:00,52.6,72,Delivery Delays reported by Customer_001 with Low priority.
+COMP-20251116-0053,Customer_043,Account Issues,Low,Closed,Frank Miller,2025-11-16 10:42:00,2025-11-18 13:54:00,51.2,72,Account Issues reported by Customer_043 with Low priority.
+COMP-20251223-0054,Customer_052,Product Defects,Medium,Closed,Carol White,2025-12-23 09:35:00,2025-12-27 04:41:00,91.1,48,Product Defects reported by Customer_052 with Medium priority.
+COMP-20250604-0055,Customer_073,Technical Problems,Medium,In Progress,Emma Davis,2025-06-04 12:35:00,,,48,Technical Problems reported by Customer_073 with Medium priority.
+COMP-20251202-0056,Customer_078,Product Defects,Low,Closed,Emma Davis,2025-12-02 10:29:00,2025-12-04 10:59:00,48.5,72,Product Defects reported by Customer_078 with Low priority.
+COMP-20251204-0057,Customer_022,Delivery Delays,Medium,In Progress,Grace Wilson,2025-12-04 02:18:00,,,48,Delivery Delays reported by Customer_022 with Medium priority.
+COMP-20251211-0058,Customer_031,Account Issues,Medium,Resolved,Grace Wilson,2025-12-11 09:14:00,2025-12-11 20:02:00,10.8,48,Account Issues reported by Customer_031 with Medium priority.
+COMP-20250822-0059,Customer_010,Billing Issues,Low,Closed,Grace Wilson,2025-08-22 13:56:00,2025-08-23 09:02:00,19.1,72,Billing Issues reported by Customer_010 with Low priority.
+COMP-20260403-0060,Customer_001,Account Issues,Medium,Resolved,Bob Smith,2026-04-03 03:49:00,2026-04-03 15:49:00,12.0,48,Account Issues reported by Customer_001 with Medium priority.
+COMP-20250822-0061,Customer_016,Account Issues,Medium,Resolved,Bob Smith,2025-08-22 04:51:00,2025-08-23 07:21:00,26.5,48,Account Issues reported by Customer_016 with Medium priority.
+COMP-20260222-0062,Customer_079,Delivery Delays,Medium,In Progress,David Lee,2026-02-22 23:57:00,,,48,Delivery Delays reported by Customer_079 with Medium priority.
+COMP-20250819-0063,Customer_061,Customer Service Complaints,Critical,Closed,Bob Smith,2025-08-19 08:48:00,2025-08-19 18:00:00,9.2,4,Customer Service Complaints reported by Customer_061 with Critical priority.
+COMP-20250814-0064,Customer_036,Customer Service Complaints,High,Closed,Bob Smith,2025-08-14 02:45:00,2025-08-15 17:33:00,38.8,24,Customer Service Complaints reported by Customer_036 with High priority.
+COMP-20250716-0065,Customer_030,Product Defects,High,Resolved,Bob Smith,2025-07-16 22:09:00,2025-07-17 01:51:00,3.7,24,Product Defects reported by Customer_030 with High priority.
+COMP-20260303-0066,Customer_027,Technical Problems,Medium,Closed,Alice Johnson,2026-03-03 13:24:00,2026-03-04 18:00:00,28.6,48,Technical Problems reported by Customer_027 with Medium priority.
+COMP-20250902-0067,Customer_049,Account Issues,Low,Open,Emma Davis,2025-09-02 00:22:00,,,72,Account Issues reported by Customer_049 with Low priority.
+COMP-20260118-0068,Customer_069,Technical Problems,High,In Progress,David Lee,2026-01-18 23:34:00,,,24,Technical Problems reported by Customer_069 with High priority.
+COMP-20250719-0069,Customer_004,Service Disruption,Medium,Resolved,David Lee,2025-07-19 10:42:00,2025-07-20 08:00:00,21.3,48,Service Disruption reported by Customer_004 with Medium priority.
+COMP-20250114-0070,Customer_069,Service Disruption,High,In Progress,Emma Davis,2025-01-14 12:37:00,,,24,Service Disruption reported by Customer_069 with High priority.
+COMP-20250404-0071,Customer_060,Billing Issues,Low,Closed,Grace Wilson,2025-04-04 01:16:00,2025-04-04 21:28:00,20.2,72,Billing Issues reported by Customer_060 with Low priority.
+COMP-20250510-0072,Customer_054,Product Defects,Medium,Open,Carol White,2025-05-10 02:30:00,,,48,Product Defects reported by Customer_054 with Medium priority.
+COMP-20260204-0073,Customer_009,Delivery Delays,Low,In Progress,Bob Smith,2026-02-04 20:02:00,,,72,Delivery Delays reported by Customer_009 with Low priority.
+COMP-20250306-0074,Customer_031,Service Disruption,Low,Resolved,Bob Smith,2025-03-06 15:42:00,2025-03-15 08:36:00,208.9,72,Service Disruption reported by Customer_031 with Low priority.
+COMP-20251107-0075,Customer_078,Technical Problems,Medium,Escalated,Bob Smith,2025-11-07 23:45:00,,,48,Technical Problems reported by Customer_078 with Medium priority.
+COMP-20260421-0076,Customer_004,Customer Service Complaints,Low,Resolved,Emma Davis,2026-04-21 09:36:00,2026-04-24 03:24:00,65.8,72,Customer Service Complaints reported by Customer_004 with Low priority.
+COMP-20250222-0077,Customer_032,Technical Problems,Critical,Resolved,Emma Davis,2025-02-22 22:49:00,2025-02-23 08:25:00,9.6,4,Technical Problems reported by Customer_032 with Critical priority.
+COMP-20250627-0078,Customer_006,Customer Service Complaints,Low,In Progress,Grace Wilson,2025-06-27 17:27:00,,,72,Customer Service Complaints reported by Customer_006 with Low priority.
+COMP-20260226-0079,Customer_054,Billing Issues,Medium,Resolved,Grace Wilson,2026-02-26 15:06:00,2026-02-27 10:42:00,19.6,48,Billing Issues reported by Customer_054 with Medium priority.
+COMP-20260510-0080,Customer_067,Customer Service Complaints,Medium,Resolved,Bob Smith,2026-05-10 20:17:00,2026-05-12 14:35:00,42.3,48,Customer Service Complaints reported by Customer_067 with Medium priority.
+COMP-20250518-0081,Customer_076,Customer Service Complaints,Medium,Closed,Frank Miller,2025-05-18 10:54:00,2025-05-24 04:54:00,138.0,48,Customer Service Complaints reported by Customer_076 with Medium priority.
+COMP-20251109-0082,Customer_073,Product Defects,High,Resolved,David Lee,2025-11-09 21:24:00,2025-11-11 22:18:00,48.9,24,Product Defects reported by Customer_073 with High priority.
+COMP-20250624-0083,Customer_034,Product Defects,Low,Resolved,Grace Wilson,2025-06-24 08:56:00,2025-06-26 22:02:00,61.1,72,Product Defects reported by Customer_034 with Low priority.
+COMP-20260104-0084,Customer_031,Delivery Delays,Low,In Progress,Alice Johnson,2026-01-04 13:31:00,,,72,Delivery Delays reported by Customer_031 with Low priority.
+COMP-20260210-0085,Customer_058,Service Disruption,Medium,Closed,David Lee,2026-02-10 00:05:00,2026-02-13 17:47:00,89.7,48,Service Disruption reported by Customer_058 with Medium priority.
+COMP-20250929-0086,Customer_071,Service Disruption,Medium,Closed,David Lee,2025-09-29 11:27:00,2025-09-30 14:45:00,27.3,48,Service Disruption reported by Customer_071 with Medium priority.
+COMP-20250303-0087,Customer_030,Product Defects,High,Resolved,Carol White,2025-03-03 23:12:00,2025-03-06 11:30:00,60.3,24,Product Defects reported by Customer_030 with High priority.
+COMP-20250522-0088,Customer_062,Customer Service Complaints,Medium,Resolved,Frank Miller,2025-05-22 23:37:00,2025-05-24 01:49:00,26.2,48,Customer Service Complaints reported by Customer_062 with Medium priority.
+COMP-20250704-0089,Customer_030,Product Defects,Critical,Open,Carol White,2025-07-04 05:19:00,,,4,Product Defects reported by Customer_030 with Critical priority.
+COMP-20250530-0090,Customer_071,Delivery Delays,Low,Resolved,Alice Johnson,2025-05-30 22:08:00,2025-06-02 03:26:00,53.3,72,Delivery Delays reported by Customer_071 with Low priority.
+COMP-20250814-0091,Customer_062,Billing Issues,High,Closed,David Lee,2025-08-14 10:11:00,2025-08-14 17:47:00,7.6,24,Billing Issues reported by Customer_062 with High priority.
+COMP-20250207-0092,Customer_063,Customer Service Complaints,Medium,Open,David Lee,2025-02-07 18:40:00,,,48,Customer Service Complaints reported by Customer_063 with Medium priority.
+COMP-20250508-0093,Customer_011,Service Disruption,Low,Closed,Carol White,2025-05-08 03:35:00,2025-05-09 23:53:00,44.3,72,Service Disruption reported by Customer_011 with Low priority.
+COMP-20260411-0094,Customer_058,Customer Service Complaints,Medium,Escalated,David Lee,2026-04-11 14:19:00,,,48,Customer Service Complaints reported by Customer_058 with Medium priority.
+COMP-20260501-0095,Customer_013,Technical Problems,Medium,Closed,Emma Davis,2026-05-01 06:40:00,2026-05-05 23:40:00,113.0,48,Technical Problems reported by Customer_013 with Medium priority.
+COMP-20250729-0096,Customer_001,Service Disruption,Low,Closed,Bob Smith,2025-07-29 14:44:00,2025-07-30 15:44:00,25.0,72,Service Disruption reported by Customer_001 with Low priority.
+COMP-20250206-0097,Customer_059,Service Disruption,Low,Resolved,Grace Wilson,2025-02-06 21:14:00,2025-02-09 04:38:00,55.4,72,Service Disruption reported by Customer_059 with Low priority.
+COMP-20250228-0098,Customer_055,Account Issues,Medium,Open,Bob Smith,2025-02-28 17:14:00,,,48,Account Issues reported by Customer_055 with Medium priority.
+COMP-20251101-0099,Customer_040,Product Defects,High,Resolved,Bob Smith,2025-11-01 23:52:00,2025-11-02 08:10:00,8.3,24,Product Defects reported by Customer_040 with High priority.
+COMP-20250914-0100,Customer_035,Billing Issues,Medium,Resolved,David Lee,2025-09-14 17:31:00,2025-09-15 22:43:00,29.2,48,Billing Issues reported by Customer_035 with Medium priority.
+COMP-20250428-0101,Customer_012,Technical Problems,High,Closed,Alice Johnson,2025-04-28 21:53:00,2025-04-29 12:17:00,14.4,24,Technical Problems reported by Customer_012 with High priority.
+COMP-20250121-0102,Customer_074,Billing Issues,Critical,Closed,Carol White,2025-01-21 05:30:00,2025-01-21 07:24:00,1.9,4,Billing Issues reported by Customer_074 with Critical priority.
+COMP-20260512-0103,Customer_063,Product Defects,Low,Closed,Frank Miller,2026-05-12 02:30:00,2026-05-17 07:18:00,124.8,72,Product Defects reported by Customer_063 with Low priority.
+COMP-20250528-0104,Customer_064,Account Issues,Low,Resolved,David Lee,2025-05-28 21:25:00,2025-05-30 14:19:00,40.9,72,Account Issues reported by Customer_064 with Low priority.
+COMP-20260319-0105,Customer_052,Technical Problems,Low,Resolved,Alice Johnson,2026-03-19 16:52:00,2026-03-21 16:16:00,47.4,72,Technical Problems reported by Customer_052 with Low priority.
+COMP-20251115-0106,Customer_047,Delivery Delays,Medium,Resolved,Emma Davis,2025-11-15 15:40:00,2025-11-15 22:34:00,6.9,48,Delivery Delays reported by Customer_047 with Medium priority.
+COMP-20250304-0107,Customer_063,Product Defects,Medium,In Progress,David Lee,2025-03-04 00:40:00,,,48,Product Defects reported by Customer_063 with Medium priority.
+COMP-20250728-0108,Customer_071,Service Disruption,High,Resolved,Alice Johnson,2025-07-28 02:14:00,2025-07-28 23:14:00,21.0,24,Service Disruption reported by Customer_071 with High priority.
+COMP-20260423-0109,Customer_064,Technical Problems,Critical,Closed,Bob Smith,2026-04-23 22:18:00,2026-04-23 23:36:00,1.3,4,Technical Problems reported by Customer_064 with Critical priority.
+COMP-20250316-0110,Customer_071,Customer Service Complaints,Medium,Closed,David Lee,2025-03-16 12:12:00,2025-03-17 13:42:00,25.5,48,Customer Service Complaints reported by Customer_071 with Medium priority.
+COMP-20250624-0111,Customer_054,Service Disruption,High,Resolved,Grace Wilson,2025-06-24 16:17:00,2025-06-25 00:29:00,8.2,24,Service Disruption reported by Customer_054 with High priority.
+COMP-20260320-0112,Customer_063,Product Defects,High,Closed,Frank Miller,2026-03-20 04:28:00,2026-03-20 13:52:00,9.4,24,Product Defects reported by Customer_063 with High priority.
+COMP-20251224-0113,Customer_025,Delivery Delays,High,Resolved,Carol White,2025-12-24 07:36:00,2025-12-25 03:30:00,19.9,24,Delivery Delays reported by Customer_025 with High priority.
+COMP-20250717-0114,Customer_049,Technical Problems,Low,Escalated,Frank Miller,2025-07-17 21:50:00,,,72,Technical Problems reported by Customer_049 with Low priority.
+COMP-20250619-0115,Customer_076,Service Disruption,Medium,Resolved,Emma Davis,2025-06-19 03:55:00,2025-06-19 12:49:00,8.9,48,Service Disruption reported by Customer_076 with Medium priority.
+COMP-20250208-0116,Customer_020,Technical Problems,Low,Resolved,Grace Wilson,2025-02-08 15:50:00,2025-02-09 19:44:00,27.9,72,Technical Problems reported by Customer_020 with Low priority.
+COMP-20250714-0117,Customer_069,Account Issues,Medium,Resolved,Carol White,2025-07-14 10:40:00,2025-07-15 22:28:00,35.8,48,Account Issues reported by Customer_069 with Medium priority.
+COMP-20250427-0118,Customer_037,Customer Service Complaints,Medium,Closed,Bob Smith,2025-04-27 23:05:00,2025-04-28 07:53:00,8.8,48,Customer Service Complaints reported by Customer_037 with Medium priority.
+COMP-20260408-0119,Customer_039,Account Issues,High,Resolved,Bob Smith,2026-04-08 00:02:00,2026-04-09 05:02:00,29.0,24,Account Issues reported by Customer_039 with High priority.
+COMP-20251017-0120,Customer_053,Product Defects,Medium,Resolved,Emma Davis,2025-10-17 21:50:00,2025-10-20 18:38:00,68.8,48,Product Defects reported by Customer_053 with Medium priority.
+COMP-20260413-0121,Customer_064,Delivery Delays,High,Closed,Bob Smith,2026-04-13 18:09:00,2026-04-16 01:39:00,55.5,24,Delivery Delays reported by Customer_064 with High priority.
+COMP-20260407-0122,Customer_060,Technical Problems,Low,Resolved,Grace Wilson,2026-04-07 09:43:00,2026-04-07 21:25:00,11.7,72,Technical Problems reported by Customer_060 with Low priority.
+COMP-20250822-0123,Customer_033,Product Defects,Critical,Resolved,David Lee,2025-08-22 09:12:00,2025-08-22 12:30:00,3.3,4,Product Defects reported by Customer_033 with Critical priority.
+COMP-20251225-0124,Customer_038,Billing Issues,Low,Closed,Emma Davis,2025-12-25 09:01:00,2025-12-27 08:31:00,47.5,72,Billing Issues reported by Customer_038 with Low priority.
+COMP-20260412-0125,Customer_007,Product Defects,Low,Open,Grace Wilson,2026-04-12 19:47:00,,,72,Product Defects reported by Customer_007 with Low priority.
+COMP-20250423-0126,Customer_046,Product Defects,High,Resolved,Grace Wilson,2025-04-23 20:12:00,2025-04-24 12:24:00,16.2,24,Product Defects reported by Customer_046 with High priority.
+COMP-20260408-0127,Customer_013,Account Issues,High,Closed,Bob Smith,2026-04-08 20:41:00,2026-04-11 11:05:00,62.4,24,Account Issues reported by Customer_013 with High priority.
+COMP-20250617-0128,Customer_038,Billing Issues,Medium,Escalated,Alice Johnson,2025-06-17 23:26:00,,,48,Billing Issues reported by Customer_038 with Medium priority.
+COMP-20250914-0129,Customer_068,Service Disruption,High,Open,Carol White,2025-09-14 08:53:00,,,24,Service Disruption reported by Customer_068 with High priority.
+COMP-20260216-0130,Customer_044,Customer Service Complaints,Critical,In Progress,Carol White,2026-02-16 03:29:00,,,4,Customer Service Complaints reported by Customer_044 with Critical priority.
+COMP-20260511-0131,Customer_051,Service Disruption,High,Resolved,Frank Miller,2026-05-11 17:23:00,2026-05-13 13:47:00,44.4,24,Service Disruption reported by Customer_051 with High priority.
+COMP-20251027-0132,Customer_034,Product Defects,Medium,Closed,Frank Miller,2025-10-27 12:52:00,2025-10-28 08:52:00,20.0,48,Product Defects reported by Customer_034 with Medium priority.
+COMP-20260414-0133,Customer_042,Account Issues,Low,Resolved,Emma Davis,2026-04-14 19:14:00,2026-04-16 17:20:00,46.1,72,Account Issues reported by Customer_042 with Low priority.
+COMP-20250313-0134,Customer_015,Technical Problems,Critical,Resolved,David Lee,2025-03-13 01:02:00,2025-03-13 09:08:00,8.1,4,Technical Problems reported by Customer_015 with Critical priority.
+COMP-20250709-0135,Customer_059,Billing Issues,Low,Closed,David Lee,2025-07-09 21:47:00,2025-07-11 14:05:00,40.3,72,Billing Issues reported by Customer_059 with Low priority.
+COMP-20260303-0136,Customer_013,Delivery Delays,High,Resolved,David Lee,2026-03-03 15:39:00,2026-03-04 13:27:00,21.8,24,Delivery Delays reported by Customer_013 with High priority.
+COMP-20260314-0137,Customer_031,Billing Issues,Medium,Resolved,David Lee,2026-03-14 11:06:00,2026-03-15 06:54:00,19.8,48,Billing Issues reported by Customer_031 with Medium priority.
+COMP-20260501-0138,Customer_016,Account Issues,Medium,Resolved,Bob Smith,2026-05-01 14:05:00,2026-05-02 21:05:00,31.0,48,Account Issues reported by Customer_016 with Medium priority.
+COMP-20250306-0139,Customer_032,Delivery Delays,Critical,Resolved,Carol White,2025-03-06 18:13:00,2025-03-07 04:25:00,10.2,4,Delivery Delays reported by Customer_032 with Critical priority.
+COMP-20260201-0140,Customer_043,Service Disruption,Medium,Open,Bob Smith,2026-02-01 04:50:00,,,48,Service Disruption reported by Customer_043 with Medium priority.
+COMP-20250509-0141,Customer_070,Billing Issues,Low,In Progress,Bob Smith,2025-05-09 05:07:00,,,72,Billing Issues reported by Customer_070 with Low priority.
+COMP-20251029-0142,Customer_031,Billing Issues,Low,Resolved,Grace Wilson,2025-10-29 10:01:00,2025-11-02 00:25:00,86.4,72,Billing Issues reported by Customer_031 with Low priority.
+COMP-20250818-0143,Customer_061,Account Issues,Medium,Resolved,Alice Johnson,2025-08-18 11:32:00,2025-08-19 10:44:00,23.2,48,Account Issues reported by Customer_061 with Medium priority.
+COMP-20250604-0144,Customer_067,Service Disruption,Critical,Resolved,Grace Wilson,2025-06-04 14:41:00,2025-06-04 15:17:00,0.6,4,Service Disruption reported by Customer_067 with Critical priority.
+COMP-20251231-0145,Customer_063,Technical Problems,High,Closed,Alice Johnson,2025-12-31 14:04:00,2025-12-31 23:04:00,9.0,24,Technical Problems reported by Customer_063 with High priority.
+COMP-20251008-0146,Customer_075,Service Disruption,Low,Resolved,Frank Miller,2025-10-08 22:20:00,2025-10-10 18:08:00,43.8,72,Service Disruption reported by Customer_075 with Low priority.
+COMP-20260313-0147,Customer_015,Product Defects,Medium,Closed,Alice Johnson,2026-03-13 20:41:00,2026-03-14 23:59:00,27.3,48,Product Defects reported by Customer_015 with Medium priority.
+COMP-20250623-0148,Customer_053,Customer Service Complaints,Low,Closed,Bob Smith,2025-06-23 14:25:00,2025-06-24 03:25:00,13.0,72,Customer Service Complaints reported by Customer_053 with Low priority.
+COMP-20250204-0149,Customer_061,Technical Problems,Medium,Resolved,Bob Smith,2025-02-04 02:53:00,2025-02-07 23:05:00,92.2,48,Technical Problems reported by Customer_061 with Medium priority.
+COMP-20251028-0150,Customer_008,Account Issues,High,Open,Emma Davis,2025-10-28 17:35:00,,,24,Account Issues reported by Customer_008 with High priority.
+COMP-20260321-0151,Customer_055,Billing Issues,Medium,Open,Grace Wilson,2026-03-21 23:03:00,,,48,Billing Issues reported by Customer_055 with Medium priority.
+COMP-20250321-0152,Customer_028,Delivery Delays,Medium,Resolved,Emma Davis,2025-03-21 21:30:00,2025-03-24 12:12:00,62.7,48,Delivery Delays reported by Customer_028 with Medium priority.
+COMP-20250426-0153,Customer_074,Customer Service Complaints,Medium,Resolved,Carol White,2025-04-26 13:54:00,2025-04-28 02:00:00,36.1,48,Customer Service Complaints reported by Customer_074 with Medium priority.
+COMP-20260421-0154,Customer_078,Delivery Delays,Medium,Closed,Alice Johnson,2026-04-21 21:53:00,2026-04-22 03:53:00,6.0,48,Delivery Delays reported by Customer_078 with Medium priority.
+COMP-20250104-0155,Customer_045,Product Defects,High,Resolved,Carol White,2025-01-04 05:55:00,2025-01-06 14:19:00,56.4,24,Product Defects reported by Customer_045 with High priority.
+COMP-20260118-0156,Customer_012,Billing Issues,Low,Closed,Alice Johnson,2026-01-18 16:13:00,2026-01-20 03:13:00,35.0,72,Billing Issues reported by Customer_012 with Low priority.
+COMP-20251102-0157,Customer_073,Service Disruption,Medium,Escalated,Grace Wilson,2025-11-02 02:56:00,,,48,Service Disruption reported by Customer_073 with Medium priority.
+COMP-20250815-0158,Customer_035,Service Disruption,High,Resolved,Alice Johnson,2025-08-15 21:27:00,2025-08-16 08:51:00,11.4,24,Service Disruption reported by Customer_035 with High priority.
+COMP-20250226-0159,Customer_056,Product Defects,Low,Closed,Carol White,2025-02-26 09:43:00,2025-02-27 22:43:00,37.0,72,Product Defects reported by Customer_056 with Low priority.
+COMP-20250104-0160,Customer_008,Account Issues,Medium,Resolved,Emma Davis,2025-01-04 06:19:00,2025-01-05 18:25:00,36.1,48,Account Issues reported by Customer_008 with Medium priority.
+COMP-20260118-0161,Customer_064,Customer Service Complaints,Low,Resolved,Alice Johnson,2026-01-18 13:11:00,2026-01-24 21:17:00,152.1,72,Customer Service Complaints reported by Customer_064 with Low priority.
+COMP-20250206-0162,Customer_046,Service Disruption,Medium,Open,Grace Wilson,2025-02-06 12:55:00,,,48,Service Disruption reported by Customer_046 with Medium priority.
+COMP-20251022-0163,Customer_041,Technical Problems,Low,In Progress,Grace Wilson,2025-10-22 13:36:00,,,72,Technical Problems reported by Customer_041 with Low priority.
+COMP-20250329-0164,Customer_042,Account Issues,Medium,Resolved,Alice Johnson,2025-03-29 19:29:00,2025-03-31 13:47:00,42.3,48,Account Issues reported by Customer_042 with Medium priority.
+COMP-20250725-0165,Customer_076,Billing Issues,Medium,Resolved,David Lee,2025-07-25 16:05:00,2025-07-26 09:35:00,17.5,48,Billing Issues reported by Customer_076 with Medium priority.
+COMP-20251121-0166,Customer_066,Product Defects,Low,Escalated,Alice Johnson,2025-11-21 03:33:00,,,72,Product Defects reported by Customer_066 with Low priority.
+COMP-20250501-0167,Customer_019,Customer Service Complaints,Medium,Escalated,Grace Wilson,2025-05-01 03:09:00,,,48,Customer Service Complaints reported by Customer_019 with Medium priority.
+COMP-20250401-0168,Customer_010,Service Disruption,Medium,Escalated,Frank Miller,2025-04-01 20:31:00,,,48,Service Disruption reported by Customer_010 with Medium priority.
+COMP-20250615-0169,Customer_080,Delivery Delays,High,Closed,Emma Davis,2025-06-15 20:20:00,2025-06-17 01:50:00,29.5,24,Delivery Delays reported by Customer_080 with High priority.
+COMP-20250630-0170,Customer_008,Technical Problems,Medium,Escalated,Emma Davis,2025-06-30 16:04:00,,,48,Technical Problems reported by Customer_008 with Medium priority.
+COMP-20251127-0171,Customer_010,Technical Problems,Low,Resolved,Carol White,2025-11-27 02:39:00,2025-11-28 09:21:00,30.7,72,Technical Problems reported by Customer_010 with Low priority.
+COMP-20260411-0172,Customer_058,Delivery Delays,Medium,Escalated,Alice Johnson,2026-04-11 18:41:00,,,48,Delivery Delays reported by Customer_058 with Medium priority.
+COMP-20250222-0173,Customer_058,Delivery Delays,Medium,Resolved,Alice Johnson,2025-02-22 10:45:00,2025-02-27 02:27:00,111.7,48,Delivery Delays reported by Customer_058 with Medium priority.
+COMP-20250925-0174,Customer_068,Billing Issues,Low,Closed,David Lee,2025-09-25 19:10:00,2025-09-28 10:34:00,63.4,72,Billing Issues reported by Customer_068 with Low priority.
+COMP-20260209-0175,Customer_007,Technical Problems,Medium,Resolved,Emma Davis,2026-02-09 20:41:00,2026-02-13 07:35:00,82.9,48,Technical Problems reported by Customer_007 with Medium priority.
+COMP-20260324-0176,Customer_078,Delivery Delays,Medium,Resolved,Frank Miller,2026-03-24 04:21:00,2026-03-28 21:39:00,113.3,48,Delivery Delays reported by Customer_078 with Medium priority.
+COMP-20250308-0177,Customer_051,Product Defects,Medium,Closed,Frank Miller,2025-03-08 19:45:00,2025-03-09 13:09:00,17.4,48,Product Defects reported by Customer_051 with Medium priority.
+COMP-20250217-0178,Customer_068,Technical Problems,Medium,Resolved,Bob Smith,2025-02-17 20:42:00,2025-02-18 16:18:00,19.6,48,Technical Problems reported by Customer_068 with Medium priority.
+COMP-20250409-0179,Customer_063,Product Defects,Medium,In Progress,Carol White,2025-04-09 07:08:00,,,48,Product Defects reported by Customer_063 with Medium priority.
+COMP-20260304-0180,Customer_070,Product Defects,High,Resolved,Grace Wilson,2026-03-04 23:56:00,2026-03-05 15:50:00,15.9,24,Product Defects reported by Customer_070 with High priority.
+COMP-20250403-0181,Customer_021,Customer Service Complaints,Medium,Closed,Bob Smith,2025-04-03 22:49:00,2025-04-05 16:25:00,41.6,48,Customer Service Complaints reported by Customer_021 with Medium priority.
+COMP-20260512-0182,Customer_031,Account Issues,Medium,Closed,Frank Miller,2026-05-12 14:39:00,2026-05-17 15:45:00,121.1,48,Account Issues reported by Customer_031 with Medium priority.
+COMP-20260408-0183,Customer_061,Technical Problems,Low,Resolved,Grace Wilson,2026-04-08 06:23:00,2026-04-10 00:29:00,42.1,72,Technical Problems reported by Customer_061 with Low priority.
+COMP-20250928-0184,Customer_065,Technical Problems,Medium,Resolved,David Lee,2025-09-28 13:10:00,2025-09-30 02:40:00,37.5,48,Technical Problems reported by Customer_065 with Medium priority.
+COMP-20251011-0185,Customer_048,Service Disruption,High,Resolved,David Lee,2025-10-11 03:45:00,2025-10-11 23:33:00,19.8,24,Service Disruption reported by Customer_048 with High priority.
+COMP-20250317-0186,Customer_066,Product Defects,Low,Resolved,David Lee,2025-03-17 13:05:00,2025-03-18 09:53:00,20.8,72,Product Defects reported by Customer_066 with Low priority.
+COMP-20250722-0187,Customer_007,Technical Problems,High,In Progress,David Lee,2025-07-22 16:23:00,,,24,Technical Problems reported by Customer_007 with High priority.
+COMP-20260210-0188,Customer_043,Billing Issues,Medium,Resolved,Alice Johnson,2026-02-10 04:08:00,2026-02-15 20:38:00,136.5,48,Billing Issues reported by Customer_043 with Medium priority.
+COMP-20250818-0189,Customer_061,Technical Problems,Medium,Resolved,Frank Miller,2025-08-18 19:00:00,2025-08-19 00:36:00,5.6,48,Technical Problems reported by Customer_061 with Medium priority.
+COMP-20250928-0190,Customer_078,Service Disruption,High,Closed,Frank Miller,2025-09-28 13:07:00,2025-09-28 20:19:00,7.2,24,Service Disruption reported by Customer_078 with High priority.
+COMP-20250823-0191,Customer_080,Billing Issues,Low,Closed,Grace Wilson,2025-08-23 02:07:00,2025-08-24 15:55:00,37.8,72,Billing Issues reported by Customer_080 with Low priority.
+COMP-20250530-0192,Customer_019,Delivery Delays,Low,Closed,Bob Smith,2025-05-30 13:00:00,2025-05-31 10:54:00,21.9,72,Delivery Delays reported by Customer_019 with Low priority.
+COMP-20250204-0193,Customer_047,Technical Problems,Low,Closed,Emma Davis,2025-02-04 16:34:00,2025-02-07 12:16:00,67.7,72,Technical Problems reported by Customer_047 with Low priority.
+COMP-20250711-0194,Customer_050,Delivery Delays,Low,Open,Alice Johnson,2025-07-11 08:47:00,,,72,Delivery Delays reported by Customer_050 with Low priority.
+COMP-20260131-0195,Customer_014,Customer Service Complaints,Low,Resolved,Frank Miller,2026-01-31 18:47:00,2026-02-01 10:11:00,15.4,72,Customer Service Complaints reported by Customer_014 with Low priority.
+COMP-20251223-0196,Customer_060,Product Defects,Medium,Open,Bob Smith,2025-12-23 15:40:00,,,48,Product Defects reported by Customer_060 with Medium priority.
+COMP-20250531-0197,Customer_005,Service Disruption,Low,Escalated,David Lee,2025-05-31 06:02:00,,,72,Service Disruption reported by Customer_005 with Low priority.
+COMP-20250831-0198,Customer_070,Billing Issues,Medium,Resolved,David Lee,2025-08-31 08:02:00,2025-08-31 20:38:00,12.6,48,Billing Issues reported by Customer_070 with Medium priority.
+COMP-20250520-0199,Customer_043,Product Defects,High,Resolved,Frank Miller,2025-05-20 03:51:00,2025-05-21 00:21:00,20.5,24,Product Defects reported by Customer_043 with High priority.
+COMP-20250912-0200,Customer_024,Account Issues,Medium,In Progress,Carol White,2025-09-12 22:31:00,,,48,Account Issues reported by Customer_024 with Medium priority.
+COMP-20250210-0201,Customer_055,Customer Service Complaints,Medium,Open,Frank Miller,2025-02-10 13:38:00,,,48,Customer Service Complaints reported by Customer_055 with Medium priority.
+COMP-20251205-0202,Customer_042,Service Disruption,Medium,Resolved,Alice Johnson,2025-12-05 09:19:00,2025-12-06 19:25:00,34.1,48,Service Disruption reported by Customer_042 with Medium priority.
+COMP-20251111-0203,Customer_046,Service Disruption,Medium,Resolved,Alice Johnson,2025-11-11 13:17:00,2025-11-13 02:23:00,37.1,48,Service Disruption reported by Customer_046 with Medium priority.
+COMP-20260215-0204,Customer_066,Billing Issues,Low,Closed,Carol White,2026-02-15 23:43:00,2026-02-19 11:13:00,83.5,72,Billing Issues reported by Customer_066 with Low priority.
+COMP-20250204-0205,Customer_017,Customer Service Complaints,Medium,Escalated,Alice Johnson,2025-02-04 07:49:00,,,48,Customer Service Complaints reported by Customer_017 with Medium priority.
+COMP-20251214-0206,Customer_020,Product Defects,Medium,Closed,Emma Davis,2025-12-14 14:23:00,2025-12-16 02:17:00,35.9,48,Product Defects reported by Customer_020 with Medium priority.
+COMP-20250508-0207,Customer_036,Delivery Delays,Low,Resolved,Carol White,2025-05-08 03:01:00,2025-05-09 16:43:00,37.7,72,Delivery Delays reported by Customer_036 with Low priority.
+COMP-20251227-0208,Customer_034,Technical Problems,Critical,Resolved,Grace Wilson,2025-12-27 14:13:00,2025-12-27 15:37:00,1.4,4,Technical Problems reported by Customer_034 with Critical priority.
+COMP-20250330-0209,Customer_058,Technical Problems,Low,Resolved,Alice Johnson,2025-03-30 22:28:00,2025-04-02 07:16:00,56.8,72,Technical Problems reported by Customer_058 with Low priority.
+COMP-20251009-0210,Customer_009,Customer Service Complaints,Critical,Closed,Frank Miller,2025-10-09 17:18:00,2025-10-09 20:36:00,3.3,4,Customer Service Complaints reported by Customer_009 with Critical priority.
+COMP-20250918-0211,Customer_047,Account Issues,High,Escalated,Bob Smith,2025-09-18 07:07:00,,,24,Account Issues reported by Customer_047 with High priority.
+COMP-20251011-0212,Customer_047,Customer Service Complaints,Low,Escalated,Alice Johnson,2025-10-11 18:23:00,,,72,Customer Service Complaints reported by Customer_047 with Low priority.
+COMP-20250723-0213,Customer_040,Delivery Delays,Low,Open,Alice Johnson,2025-07-23 22:46:00,,,72,Delivery Delays reported by Customer_040 with Low priority.
+COMP-20260513-0214,Customer_017,Technical Problems,High,Open,Alice Johnson,2026-05-13 10:41:00,,,24,Technical Problems reported by Customer_017 with High priority.
+COMP-20251124-0215,Customer_071,Technical Problems,Medium,Resolved,Grace Wilson,2025-11-24 18:11:00,2025-11-25 04:17:00,10.1,48,Technical Problems reported by Customer_071 with Medium priority.
+COMP-20250320-0216,Customer_067,Delivery Delays,Critical,Resolved,Alice Johnson,2025-03-20 09:10:00,2025-03-20 20:40:00,11.5,4,Delivery Delays reported by Customer_067 with Critical priority.
+COMP-20250509-0217,Customer_011,Service Disruption,Medium,In Progress,Carol White,2025-05-09 06:40:00,,,48,Service Disruption reported by Customer_011 with Medium priority.
+COMP-20250915-0218,Customer_012,Product Defects,Low,Resolved,Emma Davis,2025-09-15 20:10:00,2025-09-17 14:52:00,42.7,72,Product Defects reported by Customer_012 with Low priority.
+COMP-20260308-0219,Customer_044,Service Disruption,Medium,Escalated,Emma Davis,2026-03-08 18:02:00,,,48,Service Disruption reported by Customer_044 with Medium priority.
+COMP-20250516-0220,Customer_074,Billing Issues,Low,In Progress,Grace Wilson,2025-05-16 20:13:00,,,72,Billing Issues reported by Customer_074 with Low priority.
+COMP-20250529-0221,Customer_070,Technical Problems,Medium,Resolved,Frank Miller,2025-05-29 20:19:00,2025-05-31 09:55:00,37.6,48,Technical Problems reported by Customer_070 with Medium priority.
+COMP-20250322-0222,Customer_008,Account Issues,Medium,Closed,Frank Miller,2025-03-22 14:26:00,2025-03-23 03:32:00,13.1,48,Account Issues reported by Customer_008 with Medium priority.
+COMP-20260515-0223,Customer_045,Delivery Delays,Low,Open,Carol White,2026-05-15 12:08:00,,,72,Delivery Delays reported by Customer_045 with Low priority.
+COMP-20250517-0224,Customer_016,Delivery Delays,Medium,Resolved,David Lee,2025-05-17 14:15:00,2025-05-19 23:39:00,57.4,48,Delivery Delays reported by Customer_016 with Medium priority.
+COMP-20260221-0225,Customer_021,Technical Problems,High,Closed,Grace Wilson,2026-02-21 10:59:00,2026-02-21 19:47:00,8.8,24,Technical Problems reported by Customer_021 with High priority.
+COMP-20260327-0226,Customer_064,Customer Service Complaints,Low,In Progress,David Lee,2026-03-27 09:31:00,,,72,Customer Service Complaints reported by Customer_064 with Low priority.
+COMP-20250630-0227,Customer_075,Technical Problems,Medium,In Progress,Bob Smith,2025-06-30 01:03:00,,,48,Technical Problems reported by Customer_075 with Medium priority.
+COMP-20251002-0228,Customer_037,Delivery Delays,High,Closed,David Lee,2025-10-02 00:54:00,2025-10-03 09:24:00,32.5,24,Delivery Delays reported by Customer_037 with High priority.
+COMP-20250725-0229,Customer_006,Product Defects,High,Escalated,Carol White,2025-07-25 01:36:00,,,24,Product Defects reported by Customer_006 with High priority.
+COMP-20260127-0230,Customer_058,Product Defects,Medium,Resolved,Emma Davis,2026-01-27 17:17:00,2026-01-28 23:29:00,30.2,48,Product Defects reported by Customer_058 with Medium priority.
+COMP-20260211-0231,Customer_048,Delivery Delays,Low,In Progress,David Lee,2026-02-11 10:35:00,,,72,Delivery Delays reported by Customer_048 with Low priority.
+COMP-20250121-0232,Customer_065,Customer Service Complaints,Low,Closed,David Lee,2025-01-21 01:02:00,2025-01-26 05:50:00,124.8,72,Customer Service Complaints reported by Customer_065 with Low priority.
+COMP-20250617-0233,Customer_018,Technical Problems,Medium,Resolved,Emma Davis,2025-06-17 19:20:00,2025-06-23 18:26:00,143.1,48,Technical Problems reported by Customer_018 with Medium priority.
+COMP-20250930-0234,Customer_066,Account Issues,High,Closed,Emma Davis,2025-09-30 15:45:00,2025-10-01 03:51:00,12.1,24,Account Issues reported by Customer_066 with High priority.
+COMP-20250607-0235,Customer_075,Billing Issues,Medium,Closed,David Lee,2025-06-07 23:55:00,2025-06-08 05:49:00,5.9,48,Billing Issues reported by Customer_075 with Medium priority.
+COMP-20251023-0236,Customer_075,Technical Problems,Low,Closed,Grace Wilson,2025-10-23 07:46:00,2025-10-29 08:40:00,144.9,72,Technical Problems reported by Customer_075 with Low priority.
+COMP-20250317-0237,Customer_049,Delivery Delays,Medium,Closed,Grace Wilson,2025-03-17 21:15:00,2025-03-23 16:33:00,139.3,48,Delivery Delays reported by Customer_049 with Medium priority.
+COMP-20250731-0238,Customer_020,Billing Issues,Low,Closed,David Lee,2025-07-31 22:13:00,2025-08-03 04:49:00,54.6,72,Billing Issues reported by Customer_020 with Low priority.
+COMP-20250923-0239,Customer_018,Technical Problems,High,Escalated,Alice Johnson,2025-09-23 06:35:00,,,24,Technical Problems reported by Customer_018 with High priority.
+COMP-20260413-0240,Customer_059,Account Issues,Medium,Resolved,Bob Smith,2026-04-13 17:21:00,2026-04-15 01:45:00,32.4,48,Account Issues reported by Customer_059 with Medium priority.
+COMP-20251109-0241,Customer_034,Customer Service Complaints,High,Closed,Frank Miller,2025-11-09 15:12:00,2025-11-09 23:18:00,8.1,24,Customer Service Complaints reported by Customer_034 with High priority.
+COMP-20251227-0242,Customer_037,Product Defects,Low,In Progress,Carol White,2025-12-27 06:44:00,,,72,Product Defects reported by Customer_037 with Low priority.
+COMP-20250528-0243,Customer_036,Product Defects,Medium,Closed,Grace Wilson,2025-05-28 03:36:00,2025-05-28 23:54:00,20.3,48,Product Defects reported by Customer_036 with Medium priority.
+COMP-20250529-0244,Customer_019,Technical Problems,High,In Progress,Grace Wilson,2025-05-29 01:18:00,,,24,Technical Problems reported by Customer_019 with High priority.
+COMP-20250420-0245,Customer_062,Billing Issues,Medium,Closed,Carol White,2025-04-20 06:52:00,2025-04-22 01:46:00,42.9,48,Billing Issues reported by Customer_062 with Medium priority.
+COMP-20250503-0246,Customer_076,Account Issues,Low,Resolved,Frank Miller,2025-05-03 07:03:00,2025-05-04 22:45:00,39.7,72,Account Issues reported by Customer_076 with Low priority.
+COMP-20250221-0247,Customer_061,Account Issues,Low,Resolved,Carol White,2025-02-21 21:49:00,2025-03-02 16:55:00,211.1,72,Account Issues reported by Customer_061 with Low priority.
+COMP-20251130-0248,Customer_062,Service Disruption,Medium,In Progress,David Lee,2025-11-30 06:48:00,,,48,Service Disruption reported by Customer_062 with Medium priority.
+COMP-20251130-0249,Customer_012,Product Defects,Low,Resolved,Grace Wilson,2025-11-30 18:14:00,2025-12-02 21:44:00,51.5,72,Product Defects reported by Customer_012 with Low priority.
+COMP-20260424-0250,Customer_023,Billing Issues,Critical,Resolved,Grace Wilson,2026-04-24 01:53:00,2026-04-24 03:59:00,2.1,4,Billing Issues reported by Customer_023 with Critical priority.

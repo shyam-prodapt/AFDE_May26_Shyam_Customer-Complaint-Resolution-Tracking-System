@@ -1,0 +1,18 @@
+{
+  "name": "crt-system-docs",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Automation scripts — screenshot capture, DB seeding, README generation",
+  "scripts": {
+    "seed": "node seed-demo-users.js",
+    "capture": "node capture.js",
+    "generate-readme": "node generate-readme.js",
+    "setup": "npm run seed && npm run capture && npm run generate-readme"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.7",
+    "mysql2": "^3.11.5",
+    "puppeteer": "latest"
+  }
+}

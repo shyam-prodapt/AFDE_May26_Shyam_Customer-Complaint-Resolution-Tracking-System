@@ -1,4 +1,32 @@
-# Customer Complaint & Resolution Tracking System
+/**
+ * generate-readme.js
+ * Generates the full README.md following the canonical structure from CLAUDE.md Section 4.
+ * Covers Phase 1 + Phase 2. Never manually edit README.md — edit this file and re-run.
+ */
+require('dotenv').config();
+const fs   = require('fs');
+const path = require('path');
+
+const ROOT        = __dirname;
+const SS_DIR      = path.join(ROOT, 'screenshots');
+const SWAGGER_DIR = path.join(ROOT, 'screenshots', 'swagger');
+
+function ssExists(file) { return fs.existsSync(path.join(SS_DIR, file)); }
+function swExists(file) { return fs.existsSync(path.join(SWAGGER_DIR, file)); }
+
+function pageImg(file, alt) {
+  return ssExists(file)
+    ? `![${alt}](./screenshots/${file})`
+    : `*(screenshot not yet captured — run \`npm run capture\`)*`;
+}
+
+function swImg(file, alt) {
+  return swExists(file)
+    ? `![${alt}](./screenshots/swagger/${file})`
+    : `*(screenshot not yet captured — run \`npm run capture\`)*`;
+}
+
+const README = `# Customer Complaint & Resolution Tracking System
 
 **CRT System** — A centralized web-based platform for end-to-end customer complaint management, SLA tracking, and ETL-powered analytics reporting.
 
@@ -56,7 +84,7 @@ Telecom · Banking · Retail · E-Commerce · Healthcare · Logistics · Educati
 ## 3. Key Features
 
 ### Phase 1 — Core Complaint Management
-- Complaint registration with auto-generated IDs (`COMP-YYYYMMDD-XXXX`)
+- Complaint registration with auto-generated IDs (\`COMP-YYYYMMDD-XXXX\`)
 - Five user roles: Admin, Supervisor, Support Agent, Customer, Quality Team
 - SLA due-date calculation (4 / 24 / 48 / 72 hours by priority)
 - Agent assignment workflow with history trail
@@ -75,7 +103,7 @@ Telecom · Banking · Retail · E-Commerce · Healthcare · Logistics · Educati
 - Category volume horizontal bar chart
 - Monthly resolution trends line chart
 - Agent performance ranking table with resolution-rate progress bars
-- Six new REST API endpoints under `/api/analytics/`
+- Six new REST API endpoints under \`/api/analytics/\`
 
 ---
 
@@ -94,19 +122,19 @@ Telecom · Banking · Retail · E-Commerce · Healthcare · Logistics · Educati
 ## 5. Installation & Setup
 
 1. **Clone the repository**
-   ```bash
+   \`\`\`bash
    git clone <repository-url>
    cd "Customer complaint and resolution tracking System"
-   ```
+   \`\`\`
 
 2. **Create the MySQL database**
-   ```sql
+   \`\`\`sql
    CREATE DATABASE IF NOT EXISTS complaint_tracking
      CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-   ```
+   \`\`\`
 
-3. **Configure the backend** — create `backend/.env`
-   ```env
+3. **Configure the backend** — create \`backend/.env\`
+   \`\`\`env
    DB_HOST=localhost
    DB_PORT=3306
    DB_USER=root
@@ -117,36 +145,36 @@ Telecom · Banking · Retail · E-Commerce · Healthcare · Logistics · Educati
    ACCESS_TOKEN_EXPIRE_MINUTES=60
    UPLOAD_DIR=uploads
    MAX_FILE_SIZE_MB=10
-   ```
+   \`\`\`
 
 4. **Install backend dependencies**
-   ```bash
+   \`\`\`bash
    cd backend
    pip install -r requirements.txt
    python seed.py   # seeds roles + default categories
-   ```
+   \`\`\`
 
-5. **Configure the frontend** — the API base URL is proxied via `frontend/vite.config.js` to `http://localhost:8001`. No additional config needed.
+5. **Configure the frontend** — the API base URL is proxied via \`frontend/vite.config.js\` to \`http://localhost:8001\`. No additional config needed.
 
 6. **Install frontend dependencies**
-   ```bash
+   \`\`\`bash
    cd frontend
    npm install
-   ```
+   \`\`\`
 
 7. **Install automation scripts** (project root)
-   ```bash
+   \`\`\`bash
    cd ..   # back to project root
    cp .env.example .env   # then fill in DB_PASSWORD
    npm install
    npm run seed   # seeds demo users, complaints, and runs the Phase 2 ETL
-   ```
+   \`\`\`
 
 ---
 
 ## 6. Running the Application
 
-```bash
+\`\`\`bash
 # Terminal 1 — Backend (port 8001)
 cd backend
 python -m uvicorn app.main:app --reload --port 8001
@@ -157,7 +185,7 @@ python -m uvicorn app.main:app --reload --port 8001
 cd frontend
 npm run dev
 # → App: http://localhost:5173
-```
+\`\`\`
 
 ### Demo Credentials
 
@@ -169,82 +197,82 @@ npm run dev
 | Customer | demo_customer@example.com | DemoCustomer@123 |
 | Quality Team | demo_quality@example.com | DemoQuality@123 |
 
-Run `npm run seed` from the project root to create all demo users and populate the database.
+Run \`npm run seed\` from the project root to create all demo users and populate the database.
 
 ---
 
 ## 7. Frontend Pages & UI Screenshots
 
-### Login — `/login`
+### Login — \`/login\`
 Public entry point. JWT-based authentication. On success, admins/supervisors/quality team land on Dashboard; agents and customers land on Complaints.
 
-![Login Page](./screenshots/01-login.png)
+${pageImg('01-login.png', 'Login Page')}
 
 ---
 
-### Register — `/register`
+### Register — \`/register\`
 Self-registration form. Newly registered users default to the Customer role.
 
-![Register Page](./screenshots/02-register.png)
+${pageImg('02-register.png', 'Register Page')}
 
 ---
 
-### Dashboard — `/dashboard`
+### Dashboard — \`/dashboard\`
 Aggregate KPI cards and charts for Admins, Supervisors, and Quality Team. Shows total complaints, SLA breaches, status distribution pie chart, and category bar chart.
 
-![Dashboard](./screenshots/03-dashboard.png)
+${pageImg('03-dashboard.png', 'Dashboard')}
 
 ---
 
-### Complaint List — `/complaints`
+### Complaint List — \`/complaints\`
 Role-filtered complaint table. Admins and Supervisors see all complaints; Support Agents see their assigned queue; Customers see their own submissions. Filterable by status, priority, and category.
 
-![Complaint List](./screenshots/04-complaint-list.png)
+${pageImg('04-complaint-list.png', 'Complaint List')}
 
 ---
 
-### New Complaint — `/complaints/new`
-Customer complaint submission form with category selection, priority, and description. On submit, an auto-ID (`COMP-YYYYMMDD-XXXX`) is generated and SLA due date is calculated.
+### New Complaint — \`/complaints/new\`
+Customer complaint submission form with category selection, priority, and description. On submit, an auto-ID (\`COMP-YYYYMMDD-XXXX\`) is generated and SLA due date is calculated.
 
-![New Complaint](./screenshots/05-new-complaint.png)
+${pageImg('05-new-complaint.png', 'New Complaint')}
 
 ---
 
-### Complaint Detail — `/complaints/:id`
+### Complaint Detail — \`/complaints/:id\`
 Full complaint view: metadata grid, status update panel, history/audit trail, attachments, and feedback section. Available actions vary by role.
 
-![Complaint Detail](./screenshots/06-complaint-detail.png)
+${pageImg('06-complaint-detail.png', 'Complaint Detail')}
 
 ---
 
-### User Management — `/users`
+### User Management — \`/users\`
 Admin-only view. Lists all registered users with their roles. Supports role change and account deactivation.
 
-![User Management](./screenshots/07-user-management.png)
+${pageImg('07-user-management.png', 'User Management')}
 
 ---
 
-### Categories — `/categories`
+### Categories — \`/categories\`
 Admin-only view. Create, edit, and delete complaint categories.
 
-![Categories](./screenshots/08-categories.png)
+${pageImg('08-categories.png', 'Categories')}
 
 ---
 
-### Analytics *(Phase 2)* — `/analytics`
+### Analytics *(Phase 2)* — \`/analytics\`
 Admin / Supervisor / Quality Team only. Displays a **Run ETL** button to load the 250-record CSV dataset into the analytics warehouse, followed by four live visualizations: SLA breach by priority, complaint volume by category, monthly resolution trends, and agent performance table.
 
-![Analytics](./screenshots/09-analytics.png)
+${pageImg('09-analytics.png', 'Analytics')}
 
 ---
 
 ## 8. API Documentation
 
-**Base URL:** `http://localhost:8001`
-**Authentication:** Bearer JWT — include `Authorization: Bearer <token>` header on all protected endpoints.
-**Interactive docs:** `http://localhost:8001/docs`
+**Base URL:** \`http://localhost:8001\`
+**Authentication:** Bearer JWT — include \`Authorization: Bearer <token>\` header on all protected endpoints.
+**Interactive docs:** \`http://localhost:8001/docs\`
 
-![Swagger UI Overview](./screenshots/swagger/swagger-01-overview.png)
+${swImg('swagger-01-overview.png', 'Swagger UI Overview')}
 
 ---
 
@@ -252,23 +280,23 @@ Admin / Supervisor / Quality Team only. Displays a **Run ETL** button to load th
 
 Login, registration, and password reset.
 
-![Auth API](./screenshots/swagger/swagger-02-auth.png)
+${swImg('swagger-02-auth.png', 'Auth API')}
 
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
-| POST | `/api/auth/register` | Register a new user account | No |
-| POST | `/api/auth/login` | Login — returns JWT access token | No |
-| POST | `/api/auth/forgot-password` | Send password reset link (stub) | No |
+| POST | \`/api/auth/register\` | Register a new user account | No |
+| POST | \`/api/auth/login\` | Login — returns JWT access token | No |
+| POST | \`/api/auth/forgot-password\` | Send password reset link (stub) | No |
 
 **Login request body** (form-urlencoded):
-```
+\`\`\`
 username=user@example.com&password=YourPassword
-```
+\`\`\`
 
 **Login response:**
-```json
+\`\`\`json
 { "access_token": "eyJ...", "token_type": "bearer" }
-```
+\`\`\`
 
 ---
 
@@ -276,14 +304,14 @@ username=user@example.com&password=YourPassword
 
 User profile and administration.
 
-![Users API](./screenshots/swagger/swagger-03-users.png)
+${swImg('swagger-03-users.png', 'Users API')}
 
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
-| GET | `/api/users/me` | Get current user profile | Any |
-| GET | `/api/users/` | List all users | Admin, Supervisor |
-| PATCH | `/api/users/{id}` | Update user role or status | Admin |
-| DELETE | `/api/users/{id}` | Deactivate user account | Admin |
+| GET | \`/api/users/me\` | Get current user profile | Any |
+| GET | \`/api/users/\` | List all users | Admin, Supervisor |
+| PATCH | \`/api/users/{id}\` | Update user role or status | Admin |
+| DELETE | \`/api/users/{id}\` | Deactivate user account | Admin |
 
 ---
 
@@ -291,27 +319,27 @@ User profile and administration.
 
 Core complaint lifecycle management.
 
-![Complaints API](./screenshots/swagger/swagger-04-complaints.png)
+${swImg('swagger-04-complaints.png', 'Complaints API')}
 
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
-| GET | `/api/complaints/` | List complaints (role-filtered) | Any |
-| POST | `/api/complaints/` | Register a new complaint | Customer |
-| GET | `/api/complaints/{id}` | Get complaint detail | Any |
-| POST | `/api/complaints/{id}/assign` | Assign complaint to agent | Admin, Supervisor |
-| PATCH | `/api/complaints/{id}/status` | Update status with comment | Any |
-| GET | `/api/complaints/{id}/history` | Full audit trail | Any |
-| POST | `/api/complaints/{id}/attachments` | Upload file attachment | Any |
+| GET | \`/api/complaints/\` | List complaints (role-filtered) | Any |
+| POST | \`/api/complaints/\` | Register a new complaint | Customer |
+| GET | \`/api/complaints/{id}\` | Get complaint detail | Any |
+| POST | \`/api/complaints/{id}/assign\` | Assign complaint to agent | Admin, Supervisor |
+| PATCH | \`/api/complaints/{id}/status\` | Update status with comment | Any |
+| GET | \`/api/complaints/{id}/history\` | Full audit trail | Any |
+| POST | \`/api/complaints/{id}/attachments\` | Upload file attachment | Any |
 
 **Create complaint request:**
-```json
+\`\`\`json
 { "category_id": 1, "description": "Issue details...", "priority": "High" }
-```
+\`\`\`
 
 **Status update request:**
-```json
+\`\`\`json
 { "status": "In Progress", "comment": "Started investigation" }
-```
+\`\`\`
 
 ---
 
@@ -319,14 +347,14 @@ Core complaint lifecycle management.
 
 Complaint category management.
 
-![Categories API](./screenshots/swagger/swagger-05-categories.png)
+${swImg('swagger-05-categories.png', 'Categories API')}
 
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
-| GET | `/api/categories/` | List all categories | Any |
-| POST | `/api/categories/` | Create new category | Admin |
-| PATCH | `/api/categories/{id}` | Update category | Admin |
-| DELETE | `/api/categories/{id}` | Delete category | Admin |
+| GET | \`/api/categories/\` | List all categories | Any |
+| POST | \`/api/categories/\` | Create new category | Admin |
+| PATCH | \`/api/categories/{id}\` | Update category | Admin |
+| DELETE | \`/api/categories/{id}\` | Delete category | Admin |
 
 ---
 
@@ -334,17 +362,17 @@ Complaint category management.
 
 Customer satisfaction ratings after resolution.
 
-![Feedback API](./screenshots/swagger/swagger-06-feedback.png)
+${swImg('swagger-06-feedback.png', 'Feedback API')}
 
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
-| POST | `/api/feedback/{complaint_id}` | Submit rating (1–5 stars) | Customer |
-| GET | `/api/feedback/{complaint_id}` | Get feedback for complaint | Any |
+| POST | \`/api/feedback/{complaint_id}\` | Submit rating (1–5 stars) | Customer |
+| GET | \`/api/feedback/{complaint_id}\` | Get feedback for complaint | Any |
 
 **Submit feedback request:**
-```json
+\`\`\`json
 { "rating": 4, "comments": "Issue was resolved quickly." }
-```
+\`\`\`
 
 ---
 
@@ -352,13 +380,13 @@ Customer satisfaction ratings after resolution.
 
 In-app notification management.
 
-![Notifications API](./screenshots/swagger/swagger-07-notifications.png)
+${swImg('swagger-07-notifications.png', 'Notifications API')}
 
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
-| GET | `/api/notifications/` | List current user's notifications | Any |
-| PATCH | `/api/notifications/{id}/read` | Mark one notification as read | Any |
-| PATCH | `/api/notifications/read-all` | Mark all notifications as read | Any |
+| GET | \`/api/notifications/\` | List current user's notifications | Any |
+| PATCH | \`/api/notifications/{id}/read\` | Mark one notification as read | Any |
+| PATCH | \`/api/notifications/read-all\` | Mark all notifications as read | Any |
 
 ---
 
@@ -366,13 +394,13 @@ In-app notification management.
 
 Aggregate statistics for operational reporting.
 
-![Dashboard API](./screenshots/swagger/swagger-08-dashboard.png)
+${swImg('swagger-08-dashboard.png', 'Dashboard API')}
 
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
-| GET | `/api/dashboard/stats` | Overall KPIs (total, open, escalated, SLA breaches, avg rating) | Admin, Supervisor, Quality Team |
-| GET | `/api/dashboard/agent-stats/{id}` | Per-agent metrics | Admin, Supervisor |
-| GET | `/api/dashboard/category-breakdown` | Complaint count per category | Admin, Supervisor, Quality Team |
+| GET | \`/api/dashboard/stats\` | Overall KPIs (total, open, escalated, SLA breaches, avg rating) | Admin, Supervisor, Quality Team |
+| GET | \`/api/dashboard/agent-stats/{id}\` | Per-agent metrics | Admin, Supervisor |
+| GET | \`/api/dashboard/category-breakdown\` | Complaint count per category | Admin, Supervisor, Quality Team |
 
 ---
 
@@ -380,24 +408,24 @@ Aggregate statistics for operational reporting.
 
 ETL pipeline control and analytics data endpoints.
 
-![Analytics API](./screenshots/swagger/swagger-09-analytics.png)
+${swImg('swagger-09-analytics.png', 'Analytics API')}
 
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
-| POST | `/api/analytics/run-etl` | Trigger ETL pipeline (CSV → transform → load) | Admin, Supervisor, Quality Team |
-| GET | `/api/analytics/summary` | Overall analytics totals | Admin, Supervisor, Quality Team |
-| GET | `/api/analytics/sla-report` | SLA breach counts by priority | Admin, Supervisor, Quality Team |
-| GET | `/api/analytics/category-analysis` | Volume + avg resolution by category | Admin, Supervisor, Quality Team |
-| GET | `/api/analytics/resolution-trends` | Monthly totals and resolved counts | Admin, Supervisor, Quality Team |
-| GET | `/api/analytics/agent-performance` | Per-agent resolution rate and SLA stats | Admin, Supervisor, Quality Team |
+| POST | \`/api/analytics/run-etl\` | Trigger ETL pipeline (CSV → transform → load) | Admin, Supervisor, Quality Team |
+| GET | \`/api/analytics/summary\` | Overall analytics totals | Admin, Supervisor, Quality Team |
+| GET | \`/api/analytics/sla-report\` | SLA breach counts by priority | Admin, Supervisor, Quality Team |
+| GET | \`/api/analytics/category-analysis\` | Volume + avg resolution by category | Admin, Supervisor, Quality Team |
+| GET | \`/api/analytics/resolution-trends\` | Monthly totals and resolved counts | Admin, Supervisor, Quality Team |
+| GET | \`/api/analytics/agent-performance\` | Per-agent resolution rate and SLA stats | Admin, Supervisor, Quality Team |
 
 **ETL response:**
-```json
+\`\`\`json
 { "status": "success", "extracted": 250, "transformed": 250, "loaded": 250 }
-```
+\`\`\`
 
 **Summary response:**
-```json
+\`\`\`json
 {
   "total_records": 250,
   "sla_breached": 47,
@@ -406,7 +434,7 @@ ETL pipeline control and analytics data endpoints.
   "breach_rate": 18.8,
   "avg_resolution_hours": 31.4
 }
-```
+\`\`\`
 
 ---
 
@@ -414,19 +442,19 @@ ETL pipeline control and analytics data endpoints.
 
 To test protected endpoints in the Swagger UI:
 
-1. Call `POST /api/auth/login` with your credentials and copy the `access_token` value.
+1. Call \`POST /api/auth/login\` with your credentials and copy the \`access_token\` value.
 2. Click the **Authorize** button at the top of the Swagger page.
 3. Enter the token value (without "Bearer " prefix) and click **Authorize**.
 
-![Swagger Auth Dialog](./screenshots/swagger/swagger-auth-dialog.png)
+${swImg('swagger-auth-dialog.png', 'Swagger Auth Dialog')}
 
-![Swagger Authorized](./screenshots/swagger/swagger-authorized.png)
+${swImg('swagger-authorized.png', 'Swagger Authorized')}
 
 ---
 
 ## 9. ETL File Format
 
-The Phase 2 ETL reads from `backend/etl/dataset/complaints_dataset.csv` — a 250-record synthetic dataset.
+The Phase 2 ETL reads from \`backend/etl/dataset/complaints_dataset.csv\` — a 250-record synthetic dataset.
 
 | Column | Type | Notes |
 |---|---|---|
@@ -436,7 +464,7 @@ The Phase 2 ETL reads from `backend/etl/dataset/complaints_dataset.csv` — a 25
 | priority | String | Low / Medium / High / Critical |
 | status | String | Open / Assigned / In Progress / Pending Customer Response / Escalated / Resolved / Closed |
 | assigned_agent | String | Agent full name (nullable) |
-| created_date | ISO DateTime | `YYYY-MM-DD HH:MM:SS` |
+| created_date | ISO DateTime | \`YYYY-MM-DD HH:MM:SS\` |
 | resolved_date | ISO DateTime | Nullable — set when resolved |
 | resolution_time_hours | Float | Calculated from date diff |
 | sla_threshold_hours | Float | 4 / 24 / 48 / 72 by priority |
@@ -444,16 +472,16 @@ The Phase 2 ETL reads from `backend/etl/dataset/complaints_dataset.csv` — a 25
 
 The transform step:
 - Normalizes priority and status casing
-- Recalculates `resolution_time_hours` from date columns
-- Sets `sla_breached = True` if `resolution_time_hours > sla_threshold_hours`
+- Recalculates \`resolution_time_hours\` from date columns
+- Sets \`sla_breached = True\` if \`resolution_time_hours > sla_threshold_hours\`
 
-The load step uses upsert logic — existing `complaint_id` rows are updated, new ones are inserted.
+The load step uses upsert logic — existing \`complaint_id\` rows are updated, new ones are inserted.
 
 ---
 
 ## 10. Project Structure
 
-```
+\`\`\`
 Customer complaint and resolution tracking System/
 ├── backend/
 │   ├── app/
@@ -573,7 +601,7 @@ Customer complaint and resolution tracking System/
 ├── .env.example                     # Config template (commit this)
 ├── CLAUDE.md                        # Project automation context
 └── README.md                        # This file (auto-generated)
-```
+\`\`\`
 
 ---
 
@@ -583,9 +611,27 @@ Run these from the **project root** directory.
 
 | Command | Description |
 |---|---|
-| `npm run seed` | Seed demo users (5 roles), categories, complaints, and trigger Phase 2 ETL |
-| `npm run capture` | Capture all frontend page screenshots and Swagger UI screenshots |
-| `npm run generate-readme` | Regenerate this README from screenshots + source |
-| `npm run setup` | Run seed → capture → generate-readme in sequence |
+| \`npm run seed\` | Seed demo users (5 roles), categories, complaints, and trigger Phase 2 ETL |
+| \`npm run capture\` | Capture all frontend page screenshots and Swagger UI screenshots |
+| \`npm run generate-readme\` | Regenerate this README from screenshots + source |
+| \`npm run setup\` | Run seed → capture → generate-readme in sequence |
 
-> Never manually edit `README.md`. Edit `generate-readme.js` and re-run `npm run generate-readme`.
+> Never manually edit \`README.md\`. Edit \`generate-readme.js\` and re-run \`npm run generate-readme\`.
+`;
+
+const outPath = path.join(ROOT, 'README.md');
+fs.writeFileSync(outPath, README, 'utf8');
+
+// Count documented pages and endpoints
+const pages     = 9;
+const endpoints = 3 + 4 + 7 + 4 + 2 + 3 + 3 + 6; // 32 total
+
+const existingScreenshots  = fs.existsSync(SS_DIR)      ? fs.readdirSync(SS_DIR).filter(f => f.endsWith('.png')).length : 0;
+const existingSwagger      = fs.existsSync(SWAGGER_DIR)  ? fs.readdirSync(SWAGGER_DIR).filter(f => f.endsWith('.png')).length : 0;
+
+console.log('=== README Generation Complete ===');
+console.log(`  Frontend pages documented  : ${pages}`);
+console.log(`  API endpoints documented   : ${endpoints} across 8 groups`);
+console.log(`  Frontend screenshots found : ${existingScreenshots}`);
+console.log(`  Swagger screenshots found  : ${existingSwagger}`);
+console.log(`  Output: ${outPath}\n`);

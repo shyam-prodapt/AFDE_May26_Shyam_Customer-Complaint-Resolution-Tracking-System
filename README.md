@@ -252,8 +252,6 @@ Admin / Supervisor / Quality Team only. Displays a **Run ETL** button to load th
 
 Login, registration, and password reset.
 
-![Auth API](./screenshots/swagger/swagger-02-auth.png)
-
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
 | POST | `/api/auth/register` | Register a new user account | No |
@@ -276,8 +274,6 @@ username=user@example.com&password=YourPassword
 
 User profile and administration.
 
-![Users API](./screenshots/swagger/swagger-03-users.png)
-
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
 | GET | `/api/users/me` | Get current user profile | Any |
@@ -290,8 +286,6 @@ User profile and administration.
 ### Complaints API
 
 Core complaint lifecycle management.
-
-![Complaints API](./screenshots/swagger/swagger-04-complaints.png)
 
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
@@ -319,8 +313,6 @@ Core complaint lifecycle management.
 
 Complaint category management.
 
-![Categories API](./screenshots/swagger/swagger-05-categories.png)
-
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
 | GET | `/api/categories/` | List all categories | Any |
@@ -333,8 +325,6 @@ Complaint category management.
 ### Feedback API
 
 Customer satisfaction ratings after resolution.
-
-![Feedback API](./screenshots/swagger/swagger-06-feedback.png)
 
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
@@ -352,8 +342,6 @@ Customer satisfaction ratings after resolution.
 
 In-app notification management.
 
-![Notifications API](./screenshots/swagger/swagger-07-notifications.png)
-
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
 | GET | `/api/notifications/` | List current user's notifications | Any |
@@ -366,8 +354,6 @@ In-app notification management.
 
 Aggregate statistics for operational reporting.
 
-![Dashboard API](./screenshots/swagger/swagger-08-dashboard.png)
-
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
 | GET | `/api/dashboard/stats` | Overall KPIs (total, open, escalated, SLA breaches, avg rating) | Admin, Supervisor, Quality Team |
@@ -379,8 +365,6 @@ Aggregate statistics for operational reporting.
 ### Analytics API *(Phase 2)*
 
 ETL pipeline control and analytics data endpoints.
-
-![Analytics API](./screenshots/swagger/swagger-09-analytics.png)
 
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
